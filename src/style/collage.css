@@ -1,21 +1,56 @@
 .collage-container {
     position: relative;
     padding: 10px;
+    width: 100%;
+    height: fit-content;
+
+    display: block;
 }
 
 .collage-image {
     width: 80%;
-    height: 80%;
     display: block;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+
+.collage-scale {
+    width: 80%;
+    display: block;
+    visibility: hidden;
+}
+
+.collage-image-right {
+    right: 0;
 }
 
 .collage-caption {
-    background-color: rgba(128, 128, 128, 0.8);
+    background-color: rgba(128, 128, 128, 0.9);
     position: absolute;
     bottom: 0;
     right: 0;
 
-    width: 60%;
-    height: 80%;
+    
+    width: 80%;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    color: white;
+}
+
+.collage-caption > div {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.collage-title {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.collage-caption-left {
+    left: 0;
 }

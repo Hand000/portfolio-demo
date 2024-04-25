@@ -1,21 +1,46 @@
-.home-slideshow {
-    position: absolute;
-    left: 0px;
-    top: 0px;
+.home-page {
 
+}
+
+.home-slideshow {
     width: 100%;
 
     z-index: 10;
 }
 
-.home-services {
+#home-services {
     width:60vw;
+    margin: auto;
 }
 
-#home-services-title {
-    margin: auto;
+#home-services > div {
+    margin-bottom: 15px;
+}
+
+#home-testimonials {
     color: white;
-    font-family: Abel Regular;
+    margin:auto;
+    
+    width: 80vw;
+}
+
+.testimonial-block {
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+}
+
+.testimonial-block-r {
+    text-align: right;
+}
+
+.home-subtitle {
+    margin: auto;
+    
+    padding: 15px;
+    color: white;
+    font-family: monospace;
+    font-size: 24px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 1200px) {
