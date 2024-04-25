@@ -1,0 +1,17 @@
+.image-caption { 
+    position: relative;
+    height: fit-content;
+}
+
+.image-caption-subject {
+    width: 100%;
+}
+
+.image-caption-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
