@@ -19,8 +19,8 @@ export default class ImageCaption extends React.Component<ImageCaptionProps, Ima
     render() {
         return (
             <div className='image-caption'>
-                <div className='image-caption-text'> { this.props.caption } </div>
                 <img className='image-caption-subject' src={this.props.image} />
+                <div className='image-caption-text'> { this.props.caption } </div>
             </div>
         );
     }

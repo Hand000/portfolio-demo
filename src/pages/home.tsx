@@ -26,9 +26,10 @@ export default class Home extends React.Component<HomeProps, HomeState> {
     render() {
         return (
             <div id='home-page'>
-                <div className='home-slideshow'>
+                <div id='home-slideshow'>
                     <Slideshow 
                         title='Interiors | Exteriors | Flower Arrangements'
+                        description='Design and decoration professional.'
                         slides={[slide1, slide2]}/>
                     </div>
                 <div id='home-services'>
@@ -47,14 +48,14 @@ export default class Home extends React.Component<HomeProps, HomeState> {
                             <p className='testimonial-quote'>
                             “John worked for me over many years on different projects. He is very creative and able to work within a budget. Friendly and a pleasure to work with.”
                             </p>
-                            <div className='testimonial-source'> — Nigel Martin Smith, Essential Nightclub / Queer bar.  </div>
+                            <div className='testimonial-source'> — <strong>Nigel Martin Smith</strong>, Essential Nightclub / Queer bar.</div>
                         </div>
                         <div className='testimonial-block testimonial-block-r'>
                             <p className='testimonial-quote'>
                             After working with John on a number of previous hospitality interiors, when it came to selecting a designer to help realise our vision for an enormous Peaky Blinders themed bar and restaurant, in the heart of Manchester City Centre, I knew immediately he was the right person for the project. With his outstanding attention to detail, professional service and the ability to work wonders with a relatively limited budget, John delivered a unique look that was beyond expectations. I would recommend John to anyone looking for a truly personalised service and look forward to working with him again on future projects, his creativity is invaluable!
                             </p>
                             <div className='testimonial-source'>
-                            — Paul Wilson / GM Peaky Blinders Bar Manchester
+                            — <strong>Paul Wilson</strong> / GM at Peaky Blinders Bar, Manchester
                             </div>
                         </div>
                         <div className='testimonial-block'>
@@ -62,7 +63,7 @@ export default class Home extends React.Component<HomeProps, HomeState> {
                             The bar looks amazing and has its own identity, which I love. Everywhere you look there is something new to see.  
                             </p>
                             <div className='testimonial-source'>
-                            — Carly Sinclair /Director/ Tank Bar 
+                            — <strong>Carly Sinclair</strong> / Director at Tank Room, Liverpool
                             </div>
                         </div>
                         <div className='testimonial-block testimonial-block-r'>
@@ -70,7 +71,7 @@ export default class Home extends React.Component<HomeProps, HomeState> {
                             From beginning to the end, we can not thank you enough, you’re ideas and professionalism are simply first class! please don’t be a stranger we loved having you around. You are now officially a member of the Jam Works Family.
                             </p>
                             <div className='testimonial-source'>
-                            — Paula Mackinnon /Owner/ The Jam Works
+                            — <strong>Paula Mackinnon</strong> / Owner of The Jam Works, Droylsden
                             </div>
                         </div>
                     </div>

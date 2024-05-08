@@ -1,24 +1,21 @@
 .about-page {
     background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0) 80%), url('../img/art/Screenshot+2022-02-23+at+14.11.58.png');
     background-position: top;
-
-    position: absolute;
-    left: 0px;
-    top: 0px;
-
     width: 100%;
+
+    padding-top: 15%;
 }
 
 .about-container {
-    background-color: black;
+    background-color: #f1ebdb;
     padding: 3%;
 
-    margin: auto;
-    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
 
     width: 80%;
 
-    color: white;
+    color: black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -39,6 +36,10 @@
     animation: 
         typing 3s steps(13, start) forwards,
         blink 1s step-end infinite;
+}
+
+#about-image {
+    color: white
 }
 
 /* Responsive */
@@ -67,7 +68,7 @@
     from, to {
         border-color: transparent;
     } 50% {
-        border-color: pink
+        border-color: rgb(179, 135, 142)
     }
 }
 

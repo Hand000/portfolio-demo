@@ -41,16 +41,23 @@
     color: white;
 }
 
-.collage-caption > div {
+.collage-caption > * {
     margin-bottom: 5px;
     font-size: 12px;
 }
 
 .collage-title {
     font-size: 22px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .collage-caption-left {
     left: 0;
+}
+
+@media only screen and (min-width: 800px) {
+    .collage-caption > * {
+        font-size: 20px;
+    }
 }

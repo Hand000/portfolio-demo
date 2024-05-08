@@ -27,15 +27,22 @@
     left: 0px;
     bottom: 0px;
 
-    font-size: 24px;
+    font-size: 16px;
     background-color: rgba(128, 128, 128, 0.49);
+
+    width: 100%;
 
     padding: 20px;
 }
 
 .slideshow-title {
-    margin-bottom: 10px;
     font-weight: bolder;
+}
+
+@media only screen and (min-width: 800px) {
+    .slideshow-text {
+        font-size: 24px;
+    }
 }
 
 @keyframes zoomSlide {

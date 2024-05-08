@@ -1,0 +1,65 @@
+#portfolio-page {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0) 98%), url('../img/z30.jpg');
+    background-position: top;
+}
+
+#portfolio-body {
+    background-color: black;
+    width: 100vw;
+}
+
+.portfolio-section {
+    width: 80%;
+    margin: auto;
+}
+
+#portfolio-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#portfolio-window {
+    background-color: black;
+    width: 80%;
+
+    padding: 15px; 
+
+    margin: auto;
+    margin-top: 150px;
+}
+
+#section-description {
+    color: white;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 80%;
+}
+
+#section-description, img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+    #portfolio-body {
+        width: 80vw;
+        margin: auto;
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25%;
+        row-gap: 0px;
+        gap: 0px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #portfolio-body {
+        width: 1200px;
+    }
+}

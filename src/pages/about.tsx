@@ -30,7 +30,7 @@ export default class About extends React.Component<AboutProps, AboutState> {
 
                         What I excel at, is providing a service to suite all budgets, whether this is a small area of your business that needs some visual inspiration, an Instagrammable wall or a complete overhaul, these can all be achieved without breaking the bank. I have many years experience working within the hospitality industry, and can offer a range of affordable design solutions for all budgets.
                     </p>
-                    <div>
+                    <div id='about-image'>
                         <ImageCaption
                             image={image1}
                             caption='Peaky Blinders Bar Manchester' />

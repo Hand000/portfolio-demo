@@ -25,7 +25,7 @@ export default class Slideshow extends React.Component<SlideshowProps, Slideshow
     }
 
     componentDidUpdate(prevProps: Readonly<SlideshowProps>, prevState: Readonly<SlideshowState>, snapshot?: any): void {
-        if (prevState.slideIndex !== this.state.slideIndex) {
+        if (prevState.slideIndex !== this.state.slideIndex || this.props.slides != prevProps.slides) {
             setTimeout(this.changeSlide, 5000);
         }
     }
@@ -36,7 +36,7 @@ export default class Slideshow extends React.Component<SlideshowProps, Slideshow
                 <div className='slideshow-background'>
                 {this.props.slides.map((slide, index) => {
                         return <img
-                            key='index'
+                            key={index}
                             className={`slideshow-slide ${index === this.state.slideIndex ? 'slideshow-active' : ''}`}
                             src={slide}/>
                     })}
@@ -54,7 +54,7 @@ export default class Slideshow extends React.Component<SlideshowProps, Slideshow
 
     changeSlide() {
         let slideIndex = this.state.slideIndex + 1;
-        if (slideIndex >= this.props.slides.length) {
+        if (slideIndex >= this.props.slides.length || this.props.slides.length == 0) {
             slideIndex = 0;
         }
 

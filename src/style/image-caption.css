@@ -9,8 +9,8 @@
 
 .image-caption-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 5px;
+    left: 0px;
 
     padding: 5px;
     background-color: rgba(128, 128, 128, 0.5);
