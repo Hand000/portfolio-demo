@@ -8,10 +8,23 @@ export interface PortfolioData {
 
 let outdoorImages: PortfolioData = {
     images: [
-        require('../../img/outdoor/a10.jpg')
+        require('../../img/outdoor/a10.jpg'),
+        require('../../img/outdoor/z4.jpg'),
+        require('../../img/outdoor/z11.jpg'),
+        require('../../img/outdoor/z27.jpg')
     ],
     title: 'Outdoor and Planting',
-    description: <div></div>
+    description: (
+        <div className='description-section'>
+            <div className='description-box description-paragraph'>
+                <div className='description-slogan'>
+                    REAL AND ARTIFICIAL PLANTING - VISUALS AND LAYOUTS - FURNITURE - PLANTERS - PERGOLA’S AND ARCHWAY’S - MURALS AND DIGITAL ART - BRANDING
+                </div>
+                <p>Outside spaces have become an important part of hospitality. They can be seen as an extra room, which can be as colourful and interesting as your interior.</p>
+                <p>I’m based in Manchester, but have worked all around the North West. </p>
+            </div>
+        </div>
+    )
 };
 
 let tankImages: PortfolioData = {
@@ -24,7 +37,18 @@ let tankImages: PortfolioData = {
 
     ],
     title: 'The Tank Room | Liverpool',
-    description: <div>'This was an amazing project to work in, the style is loosely based on a Budapest ruin bar. The general idea is to have a high impact eclectic colourful look, achieved in a cost effective way.'</div>
+    description: (
+        <div className='description-section'>
+            <div className='description-box description-paragraph'> 
+                <p>This was an amazing project to work on, with style is loosely based on the theme and decor a Budapest ruin bar. </p>
+                <p>The general idea was to achieve a high impact, eclectic and colourful look, in a cost effective way.</p>
+            </div>
+            <img 
+                className='description-box description-image'
+                src={require('../../img/tank/before+tank.jpg')} 
+                alt='before+tank.jpg'/>
+        </div>
+    )
 };
 
 let jamImages: PortfolioData = {
@@ -37,7 +61,15 @@ let jamImages: PortfolioData = {
         require('../../img/jam/w14.jpg')
     ],
     title: 'The Jam Works | Droylsden',
-    description: <div>'The one thing that stood out to me on this project was the owners love of colour, but we also discussed that the space needed character and atmosphere. A more cosy interior. This look is loosely based on a speakeasy bar, but wuth a colourful, modern and fun twist.'</div>
+    description: (
+        <div className='description-section'>
+            <div className='description-box description-paragraph'>
+                <p>The one thing that stood out to me on this project was the owner's love of colour. We also discussed the need for more character and atmosphere in the space. </p>
+                <p>A more cosy interior with a bright and vibrant colour scheme. This look is loosely based on speakeasy style, but with a colourful, modern and fun twist. </p>
+            </div>
+            <img className='description-box description-image' src={require('../../img/jam/w+b+1.jpg')} alt='w+b+1.jpg'/>
+        </div>
+    )
 };
 
 let nestImages: PortfolioData = {
@@ -49,7 +81,15 @@ let nestImages: PortfolioData = {
         require('../../img/nest/z63.jpg'),
     ],
     title: 'The Nest | Blackpool',
-    description: <div>'Instagram friendly B&B in Blackpool. The brief was to make it appealing to a a wide demographic, a young relaxing party pad that would also work for young families using colour blocking techniques to add interest and concealed lighting for a more modern look.'</div>
+    description: (
+        <div className='description-section'>
+            <div className='description-box description-paragraph'>
+                <p>The Nest is a very Instagram friendly B&B in Blackpool. </p>
+                <p>The brief was to make it appealing to a a wide demographic, a young relaxing party pad that would also work for young families. </p>
+                <p>Using colour blocking techniques to add interest and concealed lighting for a more modern look.</p>
+            </div>
+        </div>
+    )
 };
 
 let dukesImages: PortfolioData = {
@@ -60,7 +100,19 @@ let dukesImages: PortfolioData = {
         require('../../img/dukes/c.jpg'),
     ],
     title: 'The Dukes Head',
-    description: <div>'Situated in the loft space, I had the chance to create a new function room. A fantastic space witha double height ceiling and exposed beams. Bold colours and new art works of all the Dukes of York helped breate new life into this interesting space.'</div>
+    description: (
+        <div className='description-section'>
+            <div className='description-box'>
+                <p>Situated in the loft space, with this project I had the chance to create a new function room. </p>
+                <img className='description-image' src={require('../../img/dukes/before.jpg')} alt='before.jpg'/>
+            </div>
+           <div className='description-box description-paragraph'>
+                <p>A fantastic space with a double height ceiling and exposed beams. </p>
+                <p>Bold colours and new artworks of former Dukes of York throughout history helped breate new life into this interesting space.</p>
+                <img className='description-image' src={require('../../img/dukes/plan+jpg.jpg')} alt='plan+jpg.jpg'/>
+            </div>
+        </div>
+    )
 };
 
 let pbmImages: PortfolioData = {
@@ -73,7 +125,8 @@ let pbmImages: PortfolioData = {
     ],
     title: 'Peaky Blinders Bar | Manchester',
     description: (
-    <div>
+    <div className="description-section">
+        <div className="description-box description-paragraph">
             <p>
                 The brief was to design a vintage style bar to reflect the era that the well known TV series was set in.
             </p>
@@ -88,8 +141,8 @@ let pbmImages: PortfolioData = {
             <p>
                 Wood panelling, vintage style lighting, furniture and wall coverings all achieved a more cohesive period look. 
             </p>
-        
-        <img src={require('../../img/pbm/Screenshot+2021-05-17+at+11.54.59.jpg')} />
+        </div>
+        <img className='description-box description-image' src={require('../../img/pbm/Screenshot+2021-05-17+at+11.54.59.jpg')} alt='Screenshot+2021-05-17+at+11.54.59.jpg'/>
     </div>)
 };
 

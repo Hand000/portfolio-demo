@@ -33,7 +33,11 @@
     margin-top: 150px;
 }
 
-#section-description {
+#portfolio-window > .slideshow-container {
+    max-height: 250px;
+}
+
+#portfolio-description {
     color: white;
     margin: auto;
     padding-top: 15px;
@@ -41,8 +45,30 @@
     width: 80%;
 }
 
-#section-description, img {
+.description-box {
+    display: block;
+    align-self: start;
+}
+
+.description-paragraph {
+    text-align: center;
+}
+
+.description-paragraph > ul, description-paragraph > ol {
+    text-align: left;
+}
+
+.description-image {
+    max-width: 500px;
     width: 100%;
+}
+
+.description-slogan {
+    color: grey;
+    text-align: center;
+    text-transform: capitalize;
+    
+    font-size: 14px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -55,6 +81,28 @@
         grid-template-rows: 25% 25% 25%;
         row-gap: 0px;
         gap: 0px;
+    }
+
+    #portfolio-window > .slideshow-container {
+        max-height: 600px;
+    }    
+
+
+    #portfolio-description {
+        width: 100%;
+    }
+
+    .description-section { 
+        display: flex;
+    }
+
+    .description-paragraph {
+        text-align: left;
+    }
+    
+    #portfolio-description > div > * {
+        padding: 15px;
+        min-width: none;
     }
 }
 
