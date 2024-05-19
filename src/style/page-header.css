@@ -36,13 +36,9 @@
     position: absolute;
     right: 0;
     top: 0;
+    overflow: hidden;
 
     font-size: 24px;
-    display: inline-block;
-
-    border-radius: 5px;
-
-    background-color: grey;
 
     animation: scaleDown 300ms ease-in-out forwards;
     transform-origin: top center;
@@ -50,14 +46,25 @@
 
 #nav-options {
     width: 200px;
+
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+
+    background-color: grey;
+
+    overflow: hidden;
 }
 
 .nav-option {
+    height: 32px;
+
     padding: 10px;
     border-bottom:1px solid black;
-    height: 32px;
+    background-clip: padding-box;
+
     text-decoration: none;
     color: white;
+
     transition: all 0.2s ease;
 }
 
@@ -65,25 +72,27 @@
     background: rgb(165, 165, 165);
     padding: 15px;
     cursor: pointer;
-    color: #fff;
+}
+
+#nav-top {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #nav-close {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-
-    margin-right: 0px;
-    margin-left: auto;
-
     padding: 10px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+    background-color: grey;
+    
     font-size: 32px;
 }
 
 #nav-close:hover {
     background: rgb(165, 165, 165);
     cursor: pointer;
-    color: #fff;
 }
 
 @media only screen and (min-width: 800px) {

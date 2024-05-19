@@ -5,7 +5,6 @@ import './index.css';
 
 import PageHeader from './components/pageHeader';
 
-import Contact from './pages/contact';
 import Portfolio from './pages/portfolio';
 import About from './pages/about';
 import Home from './pages/home';
@@ -23,7 +22,6 @@ root.render(
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/portfolio'element={<Portfolio/>}/>
-          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </div>
       <PageFooter />
