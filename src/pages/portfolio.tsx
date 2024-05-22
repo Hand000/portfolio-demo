@@ -20,8 +20,8 @@ export default class Portfolio extends React.Component<PortfolioProps, Portfolio
         super(props)
 
         this.state = {
-            currentSection: dukesImages,
-            displayPopup: true
+            currentSection: outdoorImages,
+            displayPopup: false
         }
     
         this.setPopup = this.setPopup.bind(this);
@@ -51,8 +51,13 @@ export default class Portfolio extends React.Component<PortfolioProps, Portfolio
                     </div>
                 </div>
                 {
-                    this.state.displayPopup ? <div id='portfolio-popup' onClick={() => {this.setState({ ...this.state, displayPopup: false })}}>
+                    this.state.displayPopup ? <div id='portfolio-popup'>
                     <div id='portfolio-window'>
+                       
+                        <div id='portfolio-close'> 
+                            <span className='fa-solid fa-x' onClick={() => {this.setState({...this.state, displayPopup: false })}}></span>
+                        </div>
+    
                         <Slideshow 
                             slides={this.state.currentSection.images}
                             title={this.state.currentSection.title}

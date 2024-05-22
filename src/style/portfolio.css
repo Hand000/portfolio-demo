@@ -6,11 +6,26 @@
 #portfolio-body {
     background-color: black;
     width: 100vw;
+    margin-top: 30px;
 }
 
 .portfolio-section {
+    position: relative;
+
     width: 80%;
+    max-height: 150px;
+    min-height: 150px;
+    padding: 10px;
+
+    overflow: hidden;
+    
     margin: auto;
+    margin-bottom: 15px;
+}
+
+.portfolio-section > div {
+    position: absolute;
+    bottom: 0;
 }
 
 #portfolio-popup {
@@ -26,6 +41,7 @@
 #portfolio-window {
     background-color: black;
     width: 80%;
+    max-width: 800px;
 
     padding: 15px; 
 
@@ -71,14 +87,25 @@
     font-size: 14px;
 }
 
+#portfolio-close {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#portfolio-close > *:hover {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 800px) {
     #portfolio-body {
         width: 80vw;
+        max-width: 800px;
         margin: auto;
         padding-top: 30px;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25%;
         row-gap: 0px;
         gap: 0px;
     }

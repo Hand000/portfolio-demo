@@ -14,8 +14,12 @@ interface PageHeaderState {
 export default class PageHeader extends React.Component<PageHeaderProps, PageHeaderState> {
     constructor(props: PageHeaderProps) {
         super(props)
-
+    
         this.state = { active: false }
+    }
+
+    componentDidMount(): void {
+
     }
 
     render() {
@@ -24,7 +28,7 @@ export default class PageHeader extends React.Component<PageHeaderProps, PageHea
                 <div id='page-title'>John Dedman Interiors</div>
                 <div id='burger-menu'>
                     <div id='burger-icon' className='fa-solid fa-bars' onClick={() => {this.setState({...this.state, active: true })}}/>
-                    <div id='nav-menu' style={{ display: this.state.active ? 'block' : 'none' }}>
+                    <div ref ='navMenu' id='nav-menu' style={{ display: this.state.active ? 'block' : 'none' }}>
                         <div id='nav-top'>
                             <div id='nav-close' className='fa-solid fa-x' onClick={() => {this.setState({...this.state, active: false })}} />
                         </div>
