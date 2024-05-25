@@ -16,6 +16,8 @@ interface PortfolioState {
 }
 
 export default class Portfolio extends React.Component<PortfolioProps, PortfolioState> {
+    popupRef: any;
+
     constructor(props: PortfolioProps) {
         super(props)
 
@@ -23,8 +25,18 @@ export default class Portfolio extends React.Component<PortfolioProps, Portfolio
             currentSection: outdoorImages,
             displayPopup: false
         }
-    
+        this.popupRef = React.createRef();
+
         this.setPopup = this.setPopup.bind(this);
+    }
+
+    componentDidMount(): void {
+        const popupRef = this.popupRef;
+        document.addEventListener('mousedown', (event) => {
+            if (popupRef.current && !popupRef.current.contains(event.target)) {
+                this.setState({ ...this.state, displayPopup: false })
+            }
+        })
     }
 
     render() {
@@ -52,7 +64,7 @@ export default class Portfolio extends React.Component<PortfolioProps, Portfolio
                 </div>
                 {
                     this.state.displayPopup ? <div id='portfolio-popup'>
-                    <div id='portfolio-window'>
+                    <div ref={this.popupRef} id='portfolio-window'>
                        
                         <div id='portfolio-close'> 
                             <span className='fa-solid fa-x' onClick={() => {this.setState({...this.state, displayPopup: false })}}></span>
@@ -62,9 +74,9 @@ export default class Portfolio extends React.Component<PortfolioProps, Portfolio
                             slides={this.state.currentSection.images}
                             title={this.state.currentSection.title}
                         />
-                        <p id='portfolio-description'>
+                        <div id='portfolio-description'>
                             {this.state.currentSection.description}
-                        </p>
+                        </div>
                     </div>
                 </div> : <></>
                 }

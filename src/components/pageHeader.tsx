@@ -12,14 +12,21 @@ interface PageHeaderState {
 }
 
 export default class PageHeader extends React.Component<PageHeaderProps, PageHeaderState> {
+    navRef: any;
+
     constructor(props: PageHeaderProps) {
         super(props)
-    
+        this.navRef = React.createRef()  
         this.state = { active: false }
     }
 
     componentDidMount(): void {
-
+        const navRef = this.navRef;
+        document.addEventListener('mousedown', (event) => {
+            if (navRef.current && (!navRef.current.contains(event.target) || navRef.current === event.target)) {
+                this.setState({ ...this.state, active: false })
+            }
+        })
     }
 
     render() {
@@ -28,11 +35,11 @@ export default class PageHeader extends React.Component<PageHeaderProps, PageHea
                 <div id='page-title'>John Dedman Interiors</div>
                 <div id='burger-menu'>
                     <div id='burger-icon' className='fa-solid fa-bars' onClick={() => {this.setState({...this.state, active: true })}}/>
-                    <div ref ='navMenu' id='nav-menu' style={{ display: this.state.active ? 'block' : 'none' }}>
+                    <div ref ={this.navRef} id='nav-menu' style={{ display: this.state.active ? 'block' : 'none' }}>
                         <div id='nav-top'>
                             <div id='nav-close' className='fa-solid fa-x' onClick={() => {this.setState({...this.state, active: false })}} />
                         </div>
-                        <div id='nav-options'>
+                        <div id='nav-options' onClick={() => {this.setState({...this.state, active: false })}}>
                             <Link style={{ textDecoration: 'none' }} to='/'> 
                                 <div className='nav-option'>Home</div>
                             </Link>
